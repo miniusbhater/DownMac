@@ -1,9 +1,10 @@
 import os
 import requests
 import subprocess
+import download 
 print("DownMac 1.0.0")
 
-url = "https://apple.com" # checking github account
+url = "https://apple.com"
 
 try:
     response = requests.get(url, timeout=5)
@@ -28,4 +29,4 @@ print("10. Mac OS X 10.10")
 print("11. Mac OS X 10.8")
 print("12. Mac OS X 10.7")
 choice = input("Select a version to download: ")
-subprocess.run(['python', 'download.py', choice])
+download.download_version(choice)
